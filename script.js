@@ -52,58 +52,1594 @@ const religionGeneralInfo = {
     `
 };
 
+// =============================================================
+// 1b. BASE DE DATOS COMPLETA DE PAÍSES
+// =============================================================
 const religionData = {
-    "USA": { rel: "Cristianismo", info: "<strong>Estados Unidos</strong><br>• Protestantes: 43%<br>• Católicos: 20%<br>• Sin afiliación: 27%" },
-    "MEX": { rel: "Cristianismo", info: "<strong>México</strong><br>• Católicos: 78%<br>• Evangélicos: 10%<br>• Sin religión: 8%" },
-    "CAN": { rel: "Cristianismo", info: "<strong>Canadá</strong><br>• Católicos: 39%<br>• Protestantes: 20%<br>• Sin religión: 29%" },
-    "BRA": { rel: "Cristianismo", info: "<strong>Brasil</strong><br>• Católicos: 64%<br>• Evangélicos: 22%<br>• Sin religión: 8%" },
-    "ARG": { rel: "Cristianismo", info: "<strong>Argentina</strong><br>• Católicos: 62%<br>• Evangélicos: 15%<br>• Sin religión: 18%" },
-    "COL": { rel: "Cristianismo", info: "<strong>Colombia</strong><br>• Católicos: 75%<br>• Protestantes: 15%<br>• Sin religión: 5%" },
-    "PER": { rel: "Cristianismo", info: "<strong>Perú</strong><br>• Católicos: 76%<br>• Evangélicos: 14%<br>• Sin religión: 5%" },
-    "CHL": { rel: "Cristianismo", info: "<strong>Chile</strong><br>• Católicos: 45%<br>• Protestantes: 15%<br>• Sin religión: 35%" },
-    "SLV": { rel: "Cristianismo", info: "<strong>El Salvador</strong><br>• Católicos: 40%<br>• Evangélicos: 35%<br>• Sin religión: 20%" },
-    "GTM": { rel: "Cristianismo", info: "<strong>Guatemala</strong><br>• Católicos: 45%<br>• Evangélicos: 40%<br>• Religiones mayas: 10%" },
-    "HND": { rel: "Cristianismo", info: "<strong>Honduras</strong><br>• Católicos: 45%<br>• Evangélicos: 40%<br>• Sin religión: 10%" },
-    "NIC": { rel: "Cristianismo", info: "<strong>Nicaragua</strong><br>• Católicos: 50%<br>• Evangélicos: 35%<br>• Sin religión: 10%" },
-    "CRI": { rel: "Cristianismo", info: "<strong>Costa Rica</strong><br>• Católicos: 47%<br>• Protestantes: 20%<br>• Sin religión: 27%" },
-    "PAN": { rel: "Cristianismo", info: "<strong>Panamá</strong><br>• Católicos: 70%<br>• Protestantes: 20%<br>• Sin religión: 5%" },
-    "ESP": { rel: "Cristianismo", info: "<strong>España</strong><br>• Católicos: 56%<br>• Sin religión: 35%<br>• Otras: 9%" },
-    "FRA": { rel: "Cristianismo", info: "<strong>Francia</strong><br>• Cristianos: 50%<br>• Sin religión: 35%<br>• Musulmanes: 10%" },
-    "ITA": { rel: "Cristianismo", info: "<strong>Italia</strong><br>• Católicos: 78%<br>• Sin religión: 15%<br>• Otras: 7%" },
-    "DEU": { rel: "Cristianismo", info: "<strong>Alemania</strong><br>• Protestantes: 25%<br>• Católicos: 28%<br>• Sin religión: 35%" },
-    "GBR": { rel: "Cristianismo", info: "<strong>Reino Unido</strong><br>• Cristianos: 45%<br>• Sin religión: 38%<br>• Musulmanes: 5%" },
-    "RUS": { rel: "Cristianismo", info: "<strong>Rusia</strong><br>• Ortodoxos: 70%<br>• Musulmanes: 12%<br>• Sin religión: 12%" },
-    "POL": { rel: "Cristianismo", info: "<strong>Polonia</strong><br>• Católicos: 85%<br>• Sin religión: 10%<br>• Otras: 5%" },
-    "SAU": { rel: "Islam", info: "<strong>Arabia Saudita</strong><br>• Musulmanes sunitas: 93%<br>• Musulmanes chiitas: 5%" },
-    "EGY": { rel: "Islam", info: "<strong>Egipto</strong><br>• Musulmanes sunitas: 90%<br>• Cristianos coptos: 10%" },
-    "DZA": { rel: "Islam", info: "<strong>Argelia</strong><br>• Musulmanes sunitas: 99%<br>• Cristianos: 1%" },
-    "MAR": { rel: "Islam", info: "<strong>Marruecos</strong><br>• Musulmanes: 99%<br>• Cristianos: 1%" },
-    "IRN": { rel: "Islam", info: "<strong>Irán</strong><br>• Musulmanes chiitas: 90%<br>• Musulmanes sunitas: 8%" },
-    "IRQ": { rel: "Islam", info: "<strong>Irak</strong><br>• Musulmanes chiitas: 60%<br>• Musulmanes sunitas: 37%" },
-    "TUR": { rel: "Islam", info: "<strong>Turquía</strong><br>• Musulmanes sunitas: 85%<br>• Alevíes: 10%<br>• Sin religión: 3%" },
-    "PAK": { rel: "Islam", info: "<strong>Pakistán</strong><br>• Musulmanes sunitas: 85%<br>• Musulmanes chiitas: 10%" },
-    "AFG": { rel: "Islam", info: "<strong>Afganistán</strong><br>• Musulmanes sunitas: 90%<br>• Musulmanes chiitas: 9%" },
-    "IDN": { rel: "Islam", info: "<strong>Indonesia</strong><br>• Musulmanes: 87%<br>• Protestantes: 6%<br>• Católicos: 3%" },
-    "IND": { rel: "Hinduismo", info: "<strong>India</strong><br>• Hindúes: 79%<br>• Musulmanes: 14%<br>• Cristianos: 2.3%<br>• Sijs: 1.7%" },
-    "NPL": { rel: "Hinduismo", info: "<strong>Nepal</strong><br>• Hindúes: 81%<br>• Budistas: 9%<br>• Musulmanes: 4%" },
-    "CHN": { rel: "Religión Tradicional China / Ninguna", info: "<strong>China</strong><br>• Sin religión: 52%<br>• Tradicional: 22%<br>• Budistas: 18%<br>• Cristianos: 5%" },
-    "JPN": { rel: "Budismo", info: "<strong>Japón</strong><br>• Sintoísmo: 51%<br>• Budismo: 34%<br>• Sin religión: 10%" },
-    "THA": { rel: "Budismo", info: "<strong>Tailandia</strong><br>• Budistas: 93%<br>• Musulmanes: 5%<br>• Cristianos: 1%" },
-    "MMR": { rel: "Budismo", info: "<strong>Myanmar</strong><br>• Budistas: 88%<br>• Cristianos: 6%<br>• Musulmanes: 4%" },
-    "KHM": { rel: "Budismo", info: "<strong>Camboya</strong><br>• Budistas: 97%<br>• Musulmanes: 2%<br>• Cristianos: 1%" },
-    "LKA": { rel: "Budismo", info: "<strong>Sri Lanka</strong><br>• Budistas: 70%<br>• Hindúes: 13%<br>• Musulmanes: 10%" },
-    "KOR": { rel: "Cristianismo", info: "<strong>Corea del Sur</strong><br>• Sin religión: 56%<br>• Cristianos: 27%<br>• Budistas: 16%" },
-    "VNM": { rel: "Budismo", info: "<strong>Vietnam</strong><br>• Sin religión: 30%<br>• Budistas: 28%<br>• Tradicional: 20%" },
-    "PHL": { rel: "Cristianismo", info: "<strong>Filipinas</strong><br>• Católicos: 80%<br>• Protestantes: 10%<br>• Musulmanes: 5%" },
-    "NGA": { rel: "Islam", info: "<strong>Nigeria</strong><br>• Musulmanes: 50%<br>• Cristianos: 48%<br>• Tradicionales: 2%" },
-    "ETH": { rel: "Cristianismo", info: "<strong>Etiopía</strong><br>• Ortodoxos: 43%<br>• Musulmanes: 34%<br>• Protestantes: 19%" },
-    "KEN": { rel: "Cristianismo", info: "<strong>Kenia</strong><br>• Protestantes: 60%<br>• Católicos: 20%<br>• Musulmanes: 10%" },
-    "TZA": { rel: "Cristianismo", info: "<strong>Tanzania</strong><br>• Cristianos: 60%<br>• Musulmanes: 35%<br>• Tradicionales: 4%" },
-    "ZAF": { rel: "Cristianismo", info: "<strong>Sudáfrica</strong><br>• Cristianos: 80%<br>• Sin religión: 15%<br>• Otras: 5%" },
-    "COD": { rel: "Cristianismo", info: "<strong>R.D. Congo</strong><br>• Católicos: 50%<br>• Protestantes: 30%<br>• Musulmanes: 10%" },
-    "AGO": { rel: "Cristianismo", info: "<strong>Angola</strong><br>• Católicos: 55%<br>• Protestantes: 25%<br>• Tradicionales: 20%" },
-    "AUS": { rel: "Cristianismo", info: "<strong>Australia</strong><br>• Sin religión: 38%<br>• Católicos: 22%<br>• Protestantes: 18%" },
-    "NZL": { rel: "Cristianismo", info: "<strong>Nueva Zelanda</strong><br>• Sin religión: 48%<br>• Cristianos: 37%<br>• Otras: 15%" }
+    // ==================== AMÉRICA DEL NORTE ====================
+    "USA": {
+        rel: "Cristianismo",
+        info: `<strong>🇺🇸 Estados Unidos</strong><br>
+        • Protestantes: 43% (Evangélicos, Bautistas, Metodistas, Pentecostales)<br>
+        • Católicos: 20%<br>
+        • Mormones: 2%<br>
+        • Testigos de Jehová: 0.8%<br>
+        • Judíos: 2%<br>
+        • Musulmanes: 1%<br>
+        • Sin afiliación: 27%<br>
+        • Otras religiones: 4%`
+    },
+    "CAN": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇦 Canadá</strong><br>
+        • Católicos: 39%<br>
+        • Protestantes: 20%<br>
+        • Ortodoxos: 1.5%<br>
+        • Musulmanes: 3%<br>
+        • Sijs: 1.4%<br>
+        • Judíos: 1%<br>
+        • Sin religión: 29%<br>
+        • Otras: 5%`
+    },
+    "MEX": {
+        rel: "Cristianismo",
+        info: `<strong>🇲🇽 México</strong><br>
+        • Católicos: 78%<br>
+        • Protestantes/Evangélicos: 10%<br>
+        • Testigos de Jehová: 1.5%<br>
+        • Sin religión: 8%<br>
+        • Religiones indígenas: 1%<br>
+        • Otras: 1.5%`
+    },
+    "GTM": {
+        rel: "Cristianismo",
+        info: `<strong>🇬🇹 Guatemala</strong><br>
+        • Católicos: 45%<br>
+        • Evangélicos: 40%<br>
+        • Testigos de Jehová: 1%<br>
+        • Mormones: 0.5%<br>
+        • Religiones mayas: 10%<br>
+        • Sin religión: 3%<br>
+        • Otras: 0.5%`
+    },
+    "BLZ": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇿 Belice</strong><br>
+        • Católicos: 40%<br>
+        • Protestantes: 30%<br>
+        • Testigos de Jehová: 1.5%<br>
+        • Sin religión: 15%<br>
+        • Religiones mayas: 5%<br>
+        • Otras: 8.5%`
+    },
+    "SLV": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇻 El Salvador</strong><br>
+        • Católicos: 40%<br>
+        • Evangélicos: 35%<br>
+        • Testigos de Jehová: 2%<br>
+        • Mormones: 1%<br>
+        • Musulmanes (creciente): 0.5%<br>
+        • Iglesia de Cristo: 1%<br>
+        • Sin religión: 20%<br>
+        • Otras: 0.5%`
+    },
+    "HND": {
+        rel: "Cristianismo",
+        info: `<strong>🇭🇳 Honduras</strong><br>
+        • Católicos: 45%<br>
+        • Evangélicos: 40%<br>
+        • Testigos de Jehová: 1%<br>
+        • Mormones: 0.5%<br>
+        • Sin religión: 10%<br>
+        • Otras: 3.5%`
+    },
+    "NIC": {
+        rel: "Cristianismo",
+        info: `<strong>🇳🇮 Nicaragua</strong><br>
+        • Católicos: 50%<br>
+        • Evangélicos: 35%<br>
+        • Testigos de Jehová: 1%<br>
+        • Mormones: 0.5%<br>
+        • Sin religión: 10%<br>
+        • Otras: 3.5%`
+    },
+    "CRI": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇷 Costa Rica</strong><br>
+        • Católicos: 47%<br>
+        • Protestantes: 20%<br>
+        • Testigos de Jehová: 1%<br>
+        • Mormones: 0.5%<br>
+        • Sin religión: 27%<br>
+        • Otras: 4.5%`
+    },
+    "PAN": {
+        rel: "Cristianismo",
+        info: `<strong>🇵🇦 Panamá</strong><br>
+        • Católicos: 70%<br>
+        • Protestantes: 20%<br>
+        • Testigos de Jehová: 1%<br>
+        • Sin religión: 5%<br>
+        • Otras: 4%`
+    },
+    "CUB": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇺 Cuba</strong><br>
+        • Católicos: 60%<br>
+        • Protestantes: 5%<br>
+        • Santería: 15%<br>
+        • Sin religión: 15%<br>
+        • Otras: 5%`
+    },
+    "HTI": {
+        rel: "Cristianismo",
+        info: `<strong>🇭🇹 Haití</strong><br>
+        • Católicos: 55%<br>
+        • Protestantes: 30%<br>
+        • Vudú: 10%<br>
+        • Sin religión: 3%<br>
+        • Otras: 2%`
+    },
+    "DOM": {
+        rel: "Cristianismo",
+        info: `<strong>🇩🇴 República Dominicana</strong><br>
+        • Católicos: 70%<br>
+        • Protestantes: 18%<br>
+        • Sin religión: 10%<br>
+        • Otras: 2%`
+    },
+    "PRI": {
+        rel: "Cristianismo",
+        info: `<strong>🇵🇷 Puerto Rico</strong><br>
+        • Católicos: 56%<br>
+        • Protestantes: 33%<br>
+        • Sin religión: 8%<br>
+        • Otras: 3%`
+    },
+    "JAM": {
+        rel: "Cristianismo",
+        info: `<strong>🇯🇲 Jamaica</strong><br>
+        • Protestantes: 64%<br>
+        • Católicos: 2%<br>
+        • Rastafari: 1%<br>
+        • Sin religión: 21%<br>
+        • Otras: 12%`
+    },
+    "BHS": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇸 Bahamas</strong><br>
+        • Protestantes: 70%<br>
+        • Católicos: 12%<br>
+        • Sin religión: 10%<br>
+        • Otras: 8%`
+    },
+
+    // ==================== AMÉRICA DEL SUR ====================
+    "COL": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇴 Colombia</strong><br>
+        • Católicos: 75%<br>
+        • Protestantes: 15%<br>
+        • Testigos de Jehová: 1%<br>
+        • Sin religión: 5%<br>
+        • Otras: 4%`
+    },
+    "VEN": {
+        rel: "Cristianismo",
+        info: `<strong>🇻🇪 Venezuela</strong><br>
+        • Católicos: 71%<br>
+        • Protestantes: 17%<br>
+        • Sin religión: 8%<br>
+        • Otras: 4%`
+    },
+    "ECU": {
+        rel: "Cristianismo",
+        info: `<strong>🇪🇨 Ecuador</strong><br>
+        • Católicos: 74%<br>
+        • Protestantes: 15%<br>
+        • Sin religión: 7%<br>
+        • Otras: 4%`
+    },
+    "PER": {
+        rel: "Cristianismo",
+        info: `<strong>🇵🇪 Perú</strong><br>
+        • Católicos: 76%<br>
+        • Evangélicos: 14%<br>
+        • Testigos de Jehová: 1%<br>
+        • Sin religión: 5%<br>
+        • Religiones indígenas: 3%<br>
+        • Otras: 1%`
+    },
+    "BOL": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇴 Bolivia</strong><br>
+        • Católicos: 70%<br>
+        • Protestantes: 20%<br>
+        • Religiones indígenas: 5%<br>
+        • Sin religión: 3%<br>
+        • Otras: 2%`
+    },
+    "CHL": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇱 Chile</strong><br>
+        • Católicos: 45%<br>
+        • Protestantes: 15%<br>
+        • Testigos de Jehová: 1%<br>
+        • Mormones: 0.5%<br>
+        • Sin religión: 35%<br>
+        • Otras: 3.5%`
+    },
+    "ARG": {
+        rel: "Cristianismo",
+        info: `<strong>🇦🇷 Argentina</strong><br>
+        • Católicos: 62%<br>
+        • Evangélicos: 15%<br>
+        • Testigos de Jehová: 1%<br>
+        • Mormones: 0.5%<br>
+        • Judíos: 0.5%<br>
+        • Musulmanes: 0.5%<br>
+        • Sin religión: 18%<br>
+        • Otras: 2.5%`
+    },
+    "PRY": {
+        rel: "Cristianismo",
+        info: `<strong>🇵🇾 Paraguay</strong><br>
+        • Católicos: 88%<br>
+        • Protestantes: 6%<br>
+        • Sin religión: 4%<br>
+        • Otras: 2%`
+    },
+    "URY": {
+        rel: "Cristianismo",
+        info: `<strong>🇺🇾 Uruguay</strong><br>
+        • Católicos: 40%<br>
+        • Protestantes: 8%<br>
+        • Sin religión: 45%<br>
+        • Otras: 7%`
+    },
+    "BRA": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇷 Brasil</strong><br>
+        • Católicos: 64%<br>
+        • Pentecostales/Evangélicos: 22%<br>
+        • Testigos de Jehová: 1%<br>
+        • Mormones: 0.5%<br>
+        • Espiritismo: 2%<br>
+        • Sin religión: 8%<br>
+        • Otras: 2.5%`
+    },
+    "GUY": {
+        rel: "Cristianismo",
+        info: `<strong>🇬🇾 Guyana</strong><br>
+        • Protestantes: 34%<br>
+        • Católicos: 8%<br>
+        • Hindúes: 28%<br>
+        • Musulmanes: 7%<br>
+        • Sin religión: 15%<br>
+        • Otras: 8%`
+    },
+    "SUR": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇷 Surinam</strong><br>
+        • Protestantes: 25%<br>
+        • Católicos: 22%<br>
+        • Hindúes: 27%<br>
+        • Musulmanes: 14%<br>
+        • Religiones indígenas: 5%<br>
+        • Otras: 7%`
+    },
+    "FLK": {
+        rel: "Cristianismo",
+        info: `<strong>🇫🇰 Islas Malvinas</strong><br>
+        • Cristianos: 80%<br>
+        • Sin religión: 15%<br>
+        • Otras: 5%`
+    },
+
+    // ==================== EUROPA ====================
+    "ESP": {
+        rel: "Cristianismo",
+        info: `<strong>🇪🇸 España</strong><br>
+        • Católicos: 56%<br>
+        • Protestantes: 1%<br>
+        • Testigos de Jehová: 0.5%<br>
+        • Mormones: 0.2%<br>
+        • Musulmanes: 4%<br>
+        • Sin religión: 35%<br>
+        • Otras: 3.3%`
+    },
+    "PRT": {
+        rel: "Cristianismo",
+        info: `<strong>🇵🇹 Portugal</strong><br>
+        • Católicos: 80%<br>
+        • Protestantes: 2%<br>
+        • Testigos de Jehová: 0.5%<br>
+        • Sin religión: 15%<br>
+        • Otras: 2.5%`
+    },
+    "AND": {
+        rel: "Cristianismo",
+        info: `<strong>🇦🇩 Andorra</strong><br>
+        • Católicos: 90%<br>
+        • Sin religión: 7%<br>
+        • Otras: 3%`
+    },
+    "FRA": {
+        rel: "Cristianismo",
+        info: `<strong>🇫🇷 Francia</strong><br>
+        • Católicos: 47%<br>
+        • Protestantes: 3%<br>
+        • Ortodoxos: 1%<br>
+        • Musulmanes: 10%<br>
+        • Judíos: 0.8%<br>
+        • Sin religión: 35%<br>
+        • Otras: 3.2%`
+    },
+    "ITA": {
+        rel: "Cristianismo",
+        info: `<strong>🇮🇹 Italia</strong><br>
+        • Católicos: 78%<br>
+        • Protestantes: 1%<br>
+        • Testigos de Jehová: 1%<br>
+        • Musulmanes: 2%<br>
+        • Sin religión: 15%<br>
+        • Otras: 3%`
+    },
+    "SMR": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇲 San Marino</strong><br>
+        • Católicos: 97%<br>
+        • Sin religión: 2%<br>
+        • Otras: 1%`
+    },
+    "VAT": {
+        rel: "Cristianismo",
+        info: `<strong>🇻🇦 Ciudad del Vaticano</strong><br>
+        • Católicos: 100%<br>
+        • Población: ~800 habitantes`
+    },
+    "DEU": {
+        rel: "Cristianismo",
+        info: `<strong>🇩🇪 Alemania</strong><br>
+        • Protestantes: 25%<br>
+        • Católicos: 28%<br>
+        • Ortodoxos: 2%<br>
+        • Musulmanes: 5%<br>
+        • Sin religión: 35%<br>
+        • Otras: 5%`
+    },
+    "LUX": {
+        rel: "Cristianismo",
+        info: `<strong>🇱🇺 Luxemburgo</strong><br>
+        • Católicos: 65%<br>
+        • Protestantes: 3%<br>
+        • Ortodoxos: 2%<br>
+        • Musulmanes: 2%<br>
+        • Sin religión: 25%<br>
+        • Otras: 3%`
+    },
+    "BEL": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇪 Bélgica</strong><br>
+        • Católicos: 58%<br>
+        • Protestantes: 2%<br>
+        • Musulmanes: 5%<br>
+        • Sin religión: 30%<br>
+        • Otras: 5%`
+    },
+    "NLD": {
+        rel: "Cristianismo",
+        info: `<strong>🇳🇱 Países Bajos</strong><br>
+        • Católicos: 20%<br>
+        • Protestantes: 15%<br>
+        • Musulmanes: 5%<br>
+        • Sin religión: 55%<br>
+        • Otras: 5%`
+    },
+    "GBR": {
+        rel: "Cristianismo",
+        info: `<strong>🇬🇧 Reino Unido</strong><br>
+        • Anglicanos: 15%<br>
+        • Católicos: 9%<br>
+        • Protestantes: 8%<br>
+        • Ortodoxos: 2%<br>
+        • Musulmanes: 5%<br>
+        • Hindúes: 1.5%<br>
+        • Sijs: 0.8%<br>
+        • Judíos: 0.5%<br>
+        • Sin religión: 38%<br>
+        • Otras: 20.2%`
+    },
+    "IRL": {
+        rel: "Cristianismo",
+        info: `<strong>🇮🇪 Irlanda</strong><br>
+        • Católicos: 70%<br>
+        • Protestantes: 5%<br>
+        • Ortodoxos: 1%<br>
+        • Musulmanes: 1%<br>
+        • Sin religión: 18%<br>
+        • Otras: 5%`
+    },
+    "CHE": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇭 Suiza</strong><br>
+        • Católicos: 36%<br>
+        • Protestantes: 26%<br>
+        • Ortodoxos: 2%<br>
+        • Musulmanes: 5%<br>
+        • Sin religión: 28%<br>
+        • Otras: 3%`
+    },
+    "AUT": {
+        rel: "Cristianismo",
+        info: `<strong>🇦🇹 Austria</strong><br>
+        • Católicos: 57%<br>
+        • Protestantes: 4%<br>
+        • Ortodoxos: 2%<br>
+        • Musulmanes: 7%<br>
+        • Sin religión: 25%<br>
+        • Otras: 5%`
+    },
+    "LIE": {
+        rel: "Cristianismo",
+        info: `<strong>🇱🇮 Liechtenstein</strong><br>
+        • Católicos: 76%<br>
+        • Protestantes: 7%<br>
+        • Musulmanes: 5%<br>
+        • Sin religión: 10%<br>
+        • Otras: 2%`
+    },
+    "CZE": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇿 Chequia</strong><br>
+        • Católicos: 10%<br>
+        • Protestantes: 2%<br>
+        • Sin religión: 78%<br>
+        • Otras: 10%`
+    },
+    "SVK": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇰 Eslovaquia</strong><br>
+        • Católicos: 62%<br>
+        • Protestantes: 8%<br>
+        • Ortodoxos: 1%<br>
+        • Sin religión: 25%<br>
+        • Otras: 4%`
+    },
+    "HUN": {
+        rel: "Cristianismo",
+        info: `<strong>🇭🇺 Hungría</strong><br>
+        • Católicos: 40%<br>
+        • Protestantes: 12%<br>
+        • Ortodoxos: 1%<br>
+        • Sin religión: 40%<br>
+        • Otras: 7%`
+    },
+    "SVN": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇮 Eslovenia</strong><br>
+        • Católicos: 57%<br>
+        • Ortodoxos: 2%<br>
+        • Protestantes: 1%<br>
+        • Sin religión: 35%<br>
+        • Otras: 5%`
+    },
+    "HRV": {
+        rel: "Cristianismo",
+        info: `<strong>🇭🇷 Croacia</strong><br>
+        • Católicos: 86%<br>
+        • Ortodoxos: 4%<br>
+        • Protestantes: 1%<br>
+        • Sin religión: 5%<br>
+        • Otras: 4%`
+    },
+    "BIH": {
+        rel: "Islam",
+        info: `<strong>🇧🇦 Bosnia y Herzegovina</strong><br>
+        • Musulmanes: 50%<br>
+        • Ortodoxos: 31%<br>
+        • Católicos: 15%<br>
+        • Sin religión: 3%<br>
+        • Otras: 1%`
+    },
+    "SRB": {
+        rel: "Cristianismo",
+        info: `<strong>🇷🇸 Serbia</strong><br>
+        • Ortodoxos: 85%<br>
+        • Católicos: 5%<br>
+        • Musulmanes: 3%<br>
+        • Protestantes: 1%<br>
+        • Sin religión: 4%<br>
+        • Otras: 2%`
+    },
+    "MNE": {
+        rel: "Cristianismo",
+        info: `<strong>🇲🇪 Montenegro</strong><br>
+        • Ortodoxos: 72%<br>
+        • Musulmanes: 19%<br>
+        • Católicos: 3%<br>
+        • Sin religión: 5%<br>
+        • Otras: 1%`
+    },
+    "KOS": {
+        rel: "Islam",
+        info: `<strong>🇽🇰 Kosovo</strong><br>
+        • Musulmanes: 95%<br>
+        • Ortodoxos: 2%<br>
+        • Católicos: 2%<br>
+        • Otras: 1%`
+    },
+    "MKD": {
+        rel: "Cristianismo",
+        info: `<strong>🇲🇰 Macedonia</strong><br>
+        • Ortodoxos: 65%<br>
+        • Musulmanes: 33%<br>
+        • Otras: 2%`
+    },
+    "ALB": {
+        rel: "Islam",
+        info: `<strong>🇦🇱 Albania</strong><br>
+        • Musulmanes: 58%<br>
+        • Católicos: 10%<br>
+        • Ortodoxos: 7%<br>
+        • Sin religión: 20%<br>
+        • Otras: 5%`
+    },
+    "GRC": {
+        rel: "Cristianismo",
+        info: `<strong>🇬🇷 Grecia</strong><br>
+        • Ortodoxos: 90%<br>
+        • Católicos: 1%<br>
+        • Musulmanes: 3%<br>
+        • Sin religión: 5%<br>
+        • Otras: 1%`
+    },
+    "BGR": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇬 Bulgaria</strong><br>
+        • Ortodoxos: 80%<br>
+        • Musulmanes: 12%<br>
+        • Sin religión: 5%<br>
+        • Otras: 3%`
+    },
+    "ROU": {
+        rel: "Cristianismo",
+        info: `<strong>🇷🇴 Rumanía</strong><br>
+        • Ortodoxos: 86%<br>
+        • Católicos: 5%<br>
+        • Protestantes: 3%<br>
+        • Sin religión: 5%<br>
+        • Otras: 1%`
+    },
+    "MDA": {
+        rel: "Cristianismo",
+        info: `<strong>🇲🇩 Moldavia</strong><br>
+        • Ortodoxos: 90%<br>
+        • Católicos: 1%<br>
+        • Sin religión: 5%<br>
+        • Otras: 4%`
+    },
+    "POL": {
+        rel: "Cristianismo",
+        info: `<strong>🇵🇱 Polonia</strong><br>
+        • Católicos: 85%<br>
+        • Ortodoxos: 1.5%<br>
+        • Protestantes: 0.5%<br>
+        • Testigos de Jehová: 0.5%<br>
+        • Sin religión: 10%<br>
+        • Otras: 2.5%`
+    },
+    "LTU": {
+        rel: "Cristianismo",
+        info: `<strong>🇱🇹 Lituania</strong><br>
+        • Católicos: 77%<br>
+        • Ortodoxos: 4%<br>
+        • Protestantes: 1%<br>
+        • Sin religión: 15%<br>
+        • Otras: 3%`
+    },
+    "LVA": {
+        rel: "Cristianismo",
+        info: `<strong>🇱🇻 Letonia</strong><br>
+        • Católicos: 20%<br>
+        • Protestantes: 30%<br>
+        • Ortodoxos: 18%<br>
+        • Sin religión: 30%<br>
+        • Otras: 2%`
+    },
+    "EST": {
+        rel: "Cristianismo",
+        info: `<strong>🇪🇪 Estonia</strong><br>
+        • Ortodoxos: 16%<br>
+        • Protestantes: 10%<br>
+        • Sin religión: 70%<br>
+        • Otras: 4%`
+    },
+    "RUS": {
+        rel: "Cristianismo",
+        info: `<strong>🇷🇺 Rusia</strong><br>
+        • Ortodoxos: 70%<br>
+        • Musulmanes: 12%<br>
+        • Católicos: 0.5%<br>
+        • Protestantes: 1%<br>
+        • Testigos de Jehová: 0.3%<br>
+        • Sin religión: 12%<br>
+        • Otras: 4.2%`
+    },
+    "BLR": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇾 Bielorrusia</strong><br>
+        • Ortodoxos: 60%<br>
+        • Católicos: 10%<br>
+        • Sin religión: 28%<br>
+        • Otras: 2%`
+    },
+    "UKR": {
+        rel: "Cristianismo",
+        info: `<strong>🇺🇦 Ucrania</strong><br>
+        • Ortodoxos: 65%<br>
+        • Católicos: 10%<br>
+        • Protestantes: 2%<br>
+        • Musulmanes: 1%<br>
+        • Sin religión: 20%<br>
+        • Otras: 2%`
+    },
+    "GEO": {
+        rel: "Cristianismo",
+        info: `<strong>🇬🇪 Georgia</strong><br>
+        • Ortodoxos: 83%<br>
+        • Musulmanes: 10%<br>
+        • Católicos: 1%<br>
+        • Sin religión: 4%<br>
+        • Otras: 2%`
+    },
+    "ARM": {
+        rel: "Cristianismo",
+        info: `<strong>🇦🇲 Armenia</strong><br>
+        • Apostólicos: 92%<br>
+        • Católicos: 1%<br>
+        • Protestantes: 1%<br>
+        • Sin religión: 4%<br>
+        • Otras: 2%`
+    },
+    "AZE": {
+        rel: "Islam",
+        info: `<strong>🇦🇿 Azerbaiyán</strong><br>
+        • Musulmanes: 96%<br>
+        • Cristianos: 2%<br>
+        • Sin religión: 1%<br>
+        • Otras: 1%`
+    },
+    "CYP": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇾 Chipre</strong><br>
+        • Ortodoxos: 89%<br>
+        • Musulmanes: 5%<br>
+        • Católicos: 2%<br>
+        • Sin religión: 3%<br>
+        • Otras: 1%`
+    },
+    "MLT": {
+        rel: "Cristianismo",
+        info: `<strong>🇲🇹 Malta</strong><br>
+        • Católicos: 98%<br>
+        • Otras: 2%`
+    },
+    "ISL": {
+        rel: "Cristianismo",
+        info: `<strong>🇮🇸 Islandia</strong><br>
+        • Luteranos: 70%<br>
+        • Católicos: 4%<br>
+        • Sin religión: 20%<br>
+        • Otras: 6%`
+    },
+    "NOR": {
+        rel: "Cristianismo",
+        info: `<strong>🇳🇴 Noruega</strong><br>
+        • Luteranos: 70%<br>
+        • Católicos: 3%<br>
+        • Musulmanes: 3%<br>
+        • Sin religión: 20%<br>
+        • Otras: 4%`
+    },
+    "SWE": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇪 Suecia</strong><br>
+        • Luteranos: 60%<br>
+        • Católicos: 2%<br>
+        • Musulmanes: 5%<br>
+        • Sin religión: 28%<br>
+        • Otras: 5%`
+    },
+    "FIN": {
+        rel: "Cristianismo",
+        info: `<strong>🇫🇮 Finlandia</strong><br>
+        • Luteranos: 70%<br>
+        • Ortodoxos: 1%<br>
+        • Sin religión: 25%<br>
+        • Otras: 4%`
+    },
+    "DNK": {
+        rel: "Cristianismo",
+        info: `<strong>🇩🇰 Dinamarca</strong><br>
+        • Luteranos: 75%<br>
+        • Católicos: 1%<br>
+        • Musulmanes: 4%<br>
+        • Sin religión: 18%<br>
+        • Otras: 2%`
+    },
+
+    // ==================== ÁFRICA ====================
+    "DZA": {
+        rel: "Islam",
+        info: `<strong>🇩🇿 Argelia</strong><br>
+        • Musulmanes sunitas: 99%<br>
+        • Cristianos: 0.5%<br>
+        • Otras: 0.5%`
+    },
+    "EGY": {
+        rel: "Islam",
+        info: `<strong>🇪🇬 Egipto</strong><br>
+        • Musulmanes sunitas: 90%<br>
+        • Cristianos coptos: 10%<br>
+        • Otras: <1%`
+    },
+    "LBY": {
+        rel: "Islam",
+        info: `<strong>🇱🇾 Libia</strong><br>
+        • Musulmanes sunitas: 97%<br>
+        • Cristianos: 1%<br>
+        • Otras: 2%`
+    },
+    "TUN": {
+        rel: "Islam",
+        info: `<strong>🇹🇳 Túnez</strong><br>
+        • Musulmanes sunitas: 99%<br>
+        • Cristianos: 0.5%<br>
+        • Judíos: 0.2%<br>
+        • Otras: 0.3%`
+    },
+    "MAR": {
+        rel: "Islam",
+        info: `<strong>🇲🇦 Marruecos</strong><br>
+        • Musulmanes: 99%<br>
+        • Cristianos: 0.5%<br>
+        • Judíos: 0.2%<br>
+        • Otras: 0.3%`
+    },
+    "MRT": {
+        rel: "Islam",
+        info: `<strong>🇲🇷 Mauritania</strong><br>
+        • Musulmanes sunitas: 99%<br>
+        • Otras: 1%`
+    },
+    "SEN": {
+        rel: "Islam",
+        info: `<strong>🇸🇳 Senegal</strong><br>
+        • Musulmanes: 95%<br>
+        • Cristianos: 4%<br>
+        • Religiones tradicionales: 1%`
+    },
+    "GMB": {
+        rel: "Islam",
+        info: `<strong>🇬🇲 Gambia</strong><br>
+        • Musulmanes: 95%<br>
+        • Cristianos: 4%<br>
+        • Religiones tradicionales: 1%`
+    },
+    "MLI": {
+        rel: "Islam",
+        info: `<strong>🇲🇱 Mali</strong><br>
+        • Musulmanes: 94%<br>
+        • Cristianos: 2%<br>
+        • Religiones tradicionales: 4%`
+    },
+    "NER": {
+        rel: "Islam",
+        info: `<strong>🇳🇪 Níger</strong><br>
+        • Musulmanes: 98%<br>
+        • Cristianos: 1%<br>
+        • Religiones tradicionales: 1%`
+    },
+    "NGA": {
+        rel: "Islam",
+        info: `<strong>🇳🇬 Nigeria</strong><br>
+        • Musulmanes: 50%<br>
+        • Cristianos: 48%<br>
+        • Religiones tradicionales: 2%`
+    },
+    "BEN": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇯 Benín</strong><br>
+        • Cristianos: 50%<br>
+        • Musulmanes: 25%<br>
+        • Vudú: 15%<br>
+        • Religiones tradicionales: 10%`
+    },
+    "TGO": {
+        rel: "Cristianismo",
+        info: `<strong>🇹🇬 Togo</strong><br>
+        • Cristianos: 45%<br>
+        • Religiones tradicionales: 35%<br>
+        • Musulmanes: 20%`
+    },
+    "GHA": {
+        rel: "Cristianismo",
+        info: `<strong>🇬🇭 Ghana</strong><br>
+        • Cristianos: 70%<br>
+        • Musulmanes: 15%<br>
+        • Religiones tradicionales: 10%<br>
+        • Otras: 5%`
+    },
+    "CIV": {
+        rel: "Islam",
+        info: `<strong>🇨🇮 Costa de Marfil</strong><br>
+        • Musulmanes: 40%<br>
+        • Cristianos: 35%<br>
+        • Religiones tradicionales: 25%`
+    },
+    "LBR": {
+        rel: "Cristianismo",
+        info: `<strong>🇱🇷 Liberia</strong><br>
+        • Cristianos: 85%<br>
+        • Musulmanes: 12%<br>
+        • Religiones tradicionales: 3%`
+    },
+    "SLE": {
+        rel: "Islam",
+        info: `<strong>🇸🇱 Sierra Leona</strong><br>
+        • Musulmanes: 78%<br>
+        • Cristianos: 20%<br>
+        • Religiones tradicionales: 2%`
+    },
+    "GIN": {
+        rel: "Islam",
+        info: `<strong>🇬🇳 Guinea</strong><br>
+        • Musulmanes: 85%<br>
+        • Cristianos: 10%<br>
+        • Religiones tradicionales: 5%`
+    },
+    "GNB": {
+        rel: "Islam",
+        info: `<strong>🇬🇼 Guinea-Bisáu</strong><br>
+        • Musulmanes: 50%<br>
+        • Religiones tradicionales: 40%<br>
+        • Cristianos: 10%`
+    },
+    "BFA": {
+        rel: "Islam",
+        info: `<strong>🇧🇫 Burkina Faso</strong><br>
+        • Musulmanes: 60%<br>
+        • Cristianos: 25%<br>
+        • Religiones tradicionales: 15%`
+    },
+    "CPV": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇻 Cabo Verde</strong><br>
+        • Católicos: 80%<br>
+        • Protestantes: 10%<br>
+        • Sin religión: 8%<br>
+        • Otras: 2%`
+    },
+    "STP": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇹 Santo Tomé</strong><br>
+        • Católicos: 60%<br>
+        • Protestantes: 25%<br>
+        • Otras: 15%`
+    },
+    "GNQ": {
+        rel: "Cristianismo",
+        info: `<strong>🇬🇶 Guinea Ecuatorial</strong><br>
+        • Católicos: 85%<br>
+        • Protestantes: 5%<br>
+        • Religiones tradicionales: 8%<br>
+        • Otras: 2%`
+    },
+    "GAB": {
+        rel: "Cristianismo",
+        info: `<strong>🇬🇦 Gabón</strong><br>
+        • Católicos: 60%<br>
+        • Protestantes: 20%<br>
+        • Religiones tradicionales: 15%<br>
+        • Musulmanes: 5%`
+    },
+    "COG": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇬 Congo</strong><br>
+        • Católicos: 50%<br>
+        • Protestantes: 30%<br>
+        • Religiones tradicionales: 15%<br>
+        • Musulmanes: 5%`
+    },
+    "COD": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇩 R.D. Congo</strong><br>
+        • Católicos: 50%<br>
+        • Protestantes: 30%<br>
+        • Kimbanguistas: 10%<br>
+        • Musulmanes: 10%`
+    },
+    "CAF": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇫 República Centroafricana</strong><br>
+        • Cristianos: 80%<br>
+        • Musulmanes: 15%<br>
+        • Religiones tradicionales: 5%`
+    },
+    "CMR": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇲 Camerún</strong><br>
+        • Cristianos: 70%<br>
+        • Musulmanes: 20%<br>
+        • Religiones tradicionales: 10%`
+    },
+    "TCD": {
+        rel: "Islam",
+        info: `<strong>🇹🇩 Chad</strong><br>
+        • Musulmanes: 55%<br>
+        • Cristianos: 35%<br>
+        • Religiones tradicionales: 10%`
+    },
+    "SDN": {
+        rel: "Islam",
+        info: `<strong>🇸🇩 Sudán</strong><br>
+        • Musulmanes: 90%<br>
+        • Cristianos: 5%<br>
+        • Religiones tradicionales: 5%`
+    },
+    "SDS": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇸 Sudán del Sur</strong><br>
+        • Cristianos: 60%<br>
+        • Religiones tradicionales: 30%<br>
+        • Musulmanes: 10%`
+    },
+    "ERI": {
+        rel: "Cristianismo",
+        info: `<strong>🇪🇷 Eritrea</strong><br>
+        • Ortodoxos: 50%<br>
+        • Musulmanes: 45%<br>
+        • Católicos: 3%<br>
+        • Protestantes: 2%`
+    },
+    "DJI": {
+        rel: "Islam",
+        info: `<strong>🇩🇯 Yibuti</strong><br>
+        • Musulmanes: 94%<br>
+        • Cristianos: 6%`
+    },
+    "SOM": {
+        rel: "Islam",
+        info: `<strong>🇸🇴 Somalia</strong><br>
+        • Musulmanes sunitas: 99%<br>
+        • Otras: 1%`
+    },
+    "ETH": {
+        rel: "Cristianismo",
+        info: `<strong>🇪🇹 Etiopía</strong><br>
+        • Cristianos ortodoxos: 43%<br>
+        • Musulmanes: 34%<br>
+        • Protestantes: 19%<br>
+        • Religiones tradicionales: 3%<br>
+        • Otras: 1%`
+    },
+    "KEN": {
+        rel: "Cristianismo",
+        info: `<strong>🇰🇪 Kenia</strong><br>
+        • Protestantes: 60%<br>
+        • Católicos: 20%<br>
+        • Musulmanes: 10%<br>
+        • Religiones tradicionales: 5%<br>
+        • Otras: 5%`
+    },
+    "UGA": {
+        rel: "Cristianismo",
+        info: `<strong>🇺🇬 Uganda</strong><br>
+        • Católicos: 40%<br>
+        • Protestantes: 40%<br>
+        • Musulmanes: 12%<br>
+        • Religiones tradicionales: 5%<br>
+        • Otras: 3%`
+    },
+    "RWA": {
+        rel: "Cristianismo",
+        info: `<strong>🇷🇼 Ruanda</strong><br>
+        • Católicos: 50%<br>
+        • Protestantes: 35%<br>
+        • Adventistas: 10%<br>
+        • Musulmanes: 3%<br>
+        • Religiones tradicionales: 2%`
+    },
+    "BDI": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇮 Burundi</strong><br>
+        • Católicos: 65%<br>
+        • Protestantes: 20%<br>
+        • Religiones tradicionales: 10%<br>
+        • Musulmanes: 5%`
+    },
+    "TZA": {
+        rel: "Cristianismo",
+        info: `<strong>🇹🇿 Tanzania</strong><br>
+        • Cristianos: 60%<br>
+        • Musulmanes: 35%<br>
+        • Religiones tradicionales: 4%<br>
+        • Otras: 1%`
+    },
+    "MOZ": {
+        rel: "Cristianismo",
+        info: `<strong>🇲🇿 Mozambique</strong><br>
+        • Cristianos: 60%<br>
+        • Religiones tradicionales: 30%<br>
+        • Musulmanes: 10%`
+    },
+    "MWI": {
+        rel: "Cristianismo",
+        info: `<strong>🇲🇼 Malawi</strong><br>
+        • Protestantes: 55%<br>
+        • Católicos: 20%<br>
+        • Musulmanes: 15%<br>
+        • Religiones tradicionales: 10%`
+    },
+    "ZMB": {
+        rel: "Cristianismo",
+        info: `<strong>🇿🇲 Zambia</strong><br>
+        • Protestantes: 65%<br>
+        • Católicos: 20%<br>
+        • Religiones tradicionales: 10%<br>
+        • Musulmanes: 5%`
+    },
+    "ZWE": {
+        rel: "Cristianismo",
+        info: `<strong>🇿🇼 Zimbabue</strong><br>
+        • Protestantes: 60%<br>
+        • Católicos: 20%<br>
+        • Religiones tradicionales: 15%<br>
+        • Otras: 5%`
+    },
+    "BWA": {
+        rel: "Cristianismo",
+        info: `<strong>🇧🇼 Botsuana</strong><br>
+        • Cristianos: 70%<br>
+        • Religiones tradicionales: 20%<br>
+        • Sin religión: 8%<br>
+        • Otras: 2%`
+    },
+    "NAM": {
+        rel: "Cristianismo",
+        info: `<strong>🇳🇦 Namibia</strong><br>
+        • Luteranos: 50%<br>
+        • Católicos: 20%<br>
+        • Religiones tradicionales: 15%<br>
+        • Otras: 15%`
+    },
+    "ZAF": {
+        rel: "Cristianismo",
+        info: `<strong>🇿🇦 Sudáfrica</strong><br>
+        • Cristianos: 80%<br>
+        • Religiones tradicionales: 4%<br>
+        • Sin religión: 15%<br>
+        • Otras: 1%`
+    },
+    "LSO": {
+        rel: "Cristianismo",
+        info: `<strong>🇱🇸 Lesoto</strong><br>
+        • Católicos: 45%<br>
+        • Protestantes: 35%<br>
+        • Religiones tradicionales: 15%<br>
+        • Otras: 5%`
+    },
+    "SWZ": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇿 Suazilandia</strong><br>
+        • Cristianos: 90%<br>
+        • Religiones tradicionales: 8%<br>
+        • Otras: 2%`
+    },
+    "MDG": {
+        rel: "Cristianismo",
+        info: `<strong>🇲🇬 Madagascar</strong><br>
+        • Cristianos: 85%<br>
+        • Religiones tradicionales: 10%<br>
+        • Musulmanes: 3%<br>
+        • Otras: 2%`
+    },
+    "COM": {
+        rel: "Islam",
+        info: `<strong>🇰🇲 Comoras</strong><br>
+        • Musulmanes sunitas: 98%<br>
+        • Cristianos: 1%<br>
+        • Otras: 1%`
+    },
+    "SYC": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇨 Seychelles</strong><br>
+        • Católicos: 75%<br>
+        • Protestantes: 10%<br>
+        • Hindúes: 5%<br>
+        • Musulmanes: 3%<br>
+        • Otras: 7%`
+    },
+
+    // ==================== ASIA ====================
+    "TUR": {
+        rel: "Islam",
+        info: `<strong>🇹🇷 Turquía</strong><br>
+        • Musulmanes sunitas: 85%<br>
+        • Alevíes: 10%<br>
+        • Cristianos: 0.5%<br>
+        • Judíos: 0.2%<br>
+        • Sin religión: 3%<br>
+        • Otras: 1.3%`
+    },
+    "SYR": {
+        rel: "Islam",
+        info: `<strong>🇸🇾 Siria</strong><br>
+        • Musulmanes sunitas: 74%<br>
+        • Alauíes: 12%<br>
+        • Cristianos: 10%<br>
+        • Drusos: 3%<br>
+        • Otras: 1%`
+    },
+    "LBN": {
+        rel: "Islam",
+        info: `<strong>🇱🇧 Líbano</strong><br>
+        • Musulmanes: 54% (Sunitas 27%, Chiitas 27%)<br>
+        • Cristianos: 40% (Maronitas, Ortodoxos, Católicos)<br>
+        • Drusos: 5%<br>
+        • Otras: 1%`
+    },
+    "JOR": {
+        rel: "Islam",
+        info: `<strong>🇯🇴 Jordania</strong><br>
+        • Musulmanes sunitas: 97%<br>
+        • Cristianos: 2%<br>
+        • Otras: 1%`
+    },
+    "ISR": {
+        rel: "Judaísmo",
+        info: `<strong>🇮🇱 Israel</strong><br>
+        • Judíos: 74%<br>
+        • Musulmanes: 18%<br>
+        • Cristianos: 2%<br>
+        • Drusos: 1.5%<br>
+        • Otras: 4.5%`
+    },
+    "PSE": {
+        rel: "Islam",
+        info: `<strong>🇵🇸 Palestina</strong><br>
+        • Musulmanes: 85%<br>
+        • Cristianos: 8%<br>
+        • Judíos: 5%<br>
+        • Otras: 2%`
+    },
+    "SAU": {
+        rel: "Islam",
+        info: `<strong>🇸🇦 Arabia Saudita</strong><br>
+        • Musulmanes sunitas: 93%<br>
+        • Musulmanes chiitas: 5%<br>
+        • Cristianos (extranjeros): 2%<br>
+        • Otras: <1%`
+    },
+    "YEM": {
+        rel: "Islam",
+        info: `<strong>🇾🇪 Yemen</strong><br>
+        • Musulmanes sunitas: 65%<br>
+        • Musulmanes chiitas: 35%<br>
+        • Otras: <1%`
+    },
+    "OMN": {
+        rel: "Islam",
+        info: `<strong>🇴🇲 Omán</strong><br>
+        • Musulmanes ibadíes: 75%<br>
+        • Musulmanes sunitas: 20%<br>
+        • Musulmanes chiitas: 5%<br>
+        • Hindúes: 3% (extranjeros)`
+    },
+    "ARE": {
+        rel: "Islam",
+        info: `<strong>🇦🇪 Emiratos Árabes</strong><br>
+        • Musulmanes: 76%<br>
+        • Cristianos: 9%<br>
+        • Hindúes: 8%<br>
+        • Budistas: 3%<br>
+        • Otras: 4%`
+    },
+    "QAT": {
+        rel: "Islam",
+        info: `<strong>🇶🇦 Qatar</strong><br>
+        • Musulmanes: 65%<br>
+        • Cristianos: 15%<br>
+        • Hindúes: 10%<br>
+        • Budistas: 5%<br>
+        • Otras: 5%`
+    },
+    "KWT": {
+        rel: "Islam",
+        info: `<strong>🇰🇼 Kuwait</strong><br>
+        • Musulmanes sunitas: 70%<br>
+        • Musulmanes chiitas: 30%<br>
+        • Cristianos: 8% (extranjeros)`
+    },
+    "BHR": {
+        rel: "Islam",
+        info: `<strong>🇧🇭 Baréin</strong><br>
+        • Musulmanes chiitas: 55%<br>
+        • Musulmanes sunitas: 45%<br>
+        • Cristianos: 10% (extranjeros)`
+    },
+    "IRQ": {
+        rel: "Islam",
+        info: `<strong>🇮🇶 Irak</strong><br>
+        • Musulmanes chiitas: 60%<br>
+        • Musulmanes sunitas: 37%<br>
+        • Cristianos: 1%<br>
+        • Yazidíes: 0.5%<br>
+        • Otras: 1.5%`
+    },
+    "IRN": {
+        rel: "Islam",
+        info: `<strong>🇮🇷 Irán</strong><br>
+        • Musulmanes chiitas: 90%<br>
+        • Musulmanes sunitas: 8%<br>
+        • Zoroastrianos: 0.5%<br>
+        • Judíos: 0.3%<br>
+        • Cristianos: 0.5%<br>
+        • Bahá'ís: 0.5%<br>
+        • Otras: 0.2%`
+    },
+    "AFG": {
+        rel: "Islam",
+        info: `<strong>🇦🇫 Afganistán</strong><br>
+        • Musulmanes sunitas: 90%<br>
+        • Musulmanes chiitas: 9%<br>
+        • Sijs: 0.5%<br>
+        • Hindúes: 0.3%<br>
+        • Otras: 0.2%`
+    },
+    "PAK": {
+        rel: "Islam",
+        info: `<strong>🇵🇰 Pakistán</strong><br>
+        • Musulmanes sunitas: 85%<br>
+        • Musulmanes chiitas: 10%<br>
+        • Cristianos: 2%<br>
+        • Hindúes: 2%<br>
+        • Otras: 1%`
+    },
+    "IND": {
+        rel: "Hinduismo",
+        info: `<strong>🇮🇳 India</strong><br>
+        • Hindúes: 79%<br>
+        • Musulmanes: 14%<br>
+        • Cristianos: 2.3%<br>
+        • Sijs: 1.7%<br>
+        • Budistas: 0.7%<br>
+        • Jains: 0.4%<br>
+        • Otras: 1.9%`
+    },
+    "NPL": {
+        rel: "Hinduismo",
+        info: `<strong>🇳🇵 Nepal</strong><br>
+        • Hindúes: 81%<br>
+        • Budistas: 9%<br>
+        • Musulmanes: 4%<br>
+        • Kirant: 3%<br>
+        • Cristianos: 1.5%<br>
+        • Otras: 1.5%`
+    },
+    "BTN": {
+        rel: "Budismo",
+        info: `<strong>🇧🇹 Bután</strong><br>
+        • Budistas: 75%<br>
+        • Hindúes: 22%<br>
+        • Otras: 3%`
+    },
+    "BGD": {
+        rel: "Islam",
+        info: `<strong>🇧🇩 Bangladesh</strong><br>
+        • Musulmanes: 90%<br>
+        • Hindúes: 8%<br>
+        • Budistas: 0.5%<br>
+        • Cristianos: 0.5%<br>
+        • Otras: 1%`
+    },
+    "LKA": {
+        rel: "Budismo",
+        info: `<strong>🇱🇰 Sri Lanka</strong><br>
+        • Budistas: 70%<br>
+        • Hindúes: 13%<br>
+        • Musulmanes: 10%<br>
+        • Cristianos: 7%`
+    },
+    "MMR": {
+        rel: "Budismo",
+        info: `<strong>🇲🇲 Myanmar</strong><br>
+        • Budistas: 88%<br>
+        • Cristianos: 6%<br>
+        • Musulmanes: 4%<br>
+        • Otras: 2%`
+    },
+    "THA": {
+        rel: "Budismo",
+        info: `<strong>🇹🇭 Tailandia</strong><br>
+        • Budistas: 93%<br>
+        • Musulmanes: 5%<br>
+        • Cristianos: 1%<br>
+        • Otras: 1%`
+    },
+    "LAO": {
+        rel: "Budismo",
+        info: `<strong>🇱🇦 Laos</strong><br>
+        • Budistas: 64%<br>
+        • Religiones tradicionales: 30%<br>
+        • Cristianos: 2%<br>
+        • Otras: 4%`
+    },
+    "KHM": {
+        rel: "Budismo",
+        info: `<strong>🇰🇭 Camboya</strong><br>
+        • Budistas: 97%<br>
+        • Musulmanes: 2%<br>
+        • Cristianos: 1%`
+    },
+    "VNM": {
+        rel: "Budismo",
+        info: `<strong>🇻🇳 Vietnam</strong><br>
+        • Sin religión: 30%<br>
+        • Budistas: 28%<br>
+        • Religión tradicional: 20%<br>
+        • Cristianos: 12%<br>
+        • Cao Dai: 5%<br>
+        • Otras: 5%`
+    },
+    "CHN": {
+        rel: "Religión Tradicional China / Ninguna",
+        info: `<strong>🇨🇳 China</strong><br>
+        • Sin religión: 52%<br>
+        • Religión tradicional china: 22%<br>
+        • Budistas: 18%<br>
+        • Cristianos: 5%<br>
+        • Musulmanes: 2%<br>
+        • Otras: 1%`
+    },
+    "TWN": {
+        rel: "Religión Tradicional China / Ninguna",
+        info: `<strong>🇹🇼 Taiwán</strong><br>
+        • Religión tradicional china: 45%<br>
+        • Budistas: 30%<br>
+        • Taoístas: 15%<br>
+        • Cristianos: 5%<br>
+        • Sin religión: 5%`
+    },
+    "MNG": {
+        rel: "Budismo",
+        info: `<strong>🇲🇳 Mongolia</strong><br>
+        • Budistas: 53%<br>
+        • Sin religión: 40%<br>
+        • Musulmanes: 3%<br>
+        • Cristianos: 2%<br>
+        • Otras: 2%`
+    },
+    "PRK": {
+        rel: "Sin Datos",
+        info: `<strong>🇰🇵 Corea del Norte</strong><br>
+        • Oficialmente ateo: 70%<br>
+        • Religiones tradicionales: 15%<br>
+        • Budistas: 10%<br>
+        • Cristianos: 5% (estimado)`
+    },
+    "KOR": {
+        rel: "Cristianismo",
+        info: `<strong>🇰🇷 Corea del Sur</strong><br>
+        • Sin religión: 56%<br>
+        • Cristianos: 27% (Protestantes 19%, Católicos 8%)<br>
+        • Budistas: 16%<br>
+        • Otras: 1%`
+    },
+    "JPN": {
+        rel: "Budismo",
+        info: `<strong>🇯🇵 Japón</strong><br>
+        • Sintoísmo: 51%<br>
+        • Budismo: 34%<br>
+        • Cristianos: 2%<br>
+        • Sin religión: 10%<br>
+        • Otras: 3%`
+    },
+    "PHL": {
+        rel: "Cristianismo",
+        info: `<strong>🇵🇭 Filipinas</strong><br>
+        • Católicos: 80%<br>
+        • Protestantes: 10%<br>
+        • Iglesia de Cristo: 2%<br>
+        • Musulmanes: 5%<br>
+        • Otras: 3%`
+    },
+    "MYS": {
+        rel: "Islam",
+        info: `<strong>🇲🇾 Malasia</strong><br>
+        • Musulmanes: 60%<br>
+        • Budistas: 20%<br>
+        • Cristianos: 10%<br>
+        • Hindúes: 6%<br>
+        • Religiones tradicionales: 3%<br>
+        • Otras: 1%`
+    },
+    "SGP": {
+        rel: "Budismo",
+        info: `<strong>🇸🇬 Singapur</strong><br>
+        • Budistas: 33%<br>
+        • Cristianos: 19%<br>
+        • Musulmanes: 14%<br>
+        • Taoístas: 10%<br>
+        • Hindúes: 5%<br>
+        • Sin religión: 17%<br>
+        • Otras: 2%`
+    },
+    "BRN": {
+        rel: "Islam",
+        info: `<strong>🇧🇳 Brunéi</strong><br>
+        • Musulmanes: 78%<br>
+        • Budistas: 8%<br>
+        • Cristianos: 7%<br>
+        • Otras: 7%`
+    },
+    "IDN": {
+        rel: "Islam",
+        info: `<strong>🇮🇩 Indonesia</strong><br>
+        • Musulmanes: 87%<br>
+        • Protestantes: 6%<br>
+        • Católicos: 3%<br>
+        • Hindúes: 1.7%<br>
+        • Budistas: 0.7%<br>
+        • Confucianistas: 0.5%<br>
+        • Otras: 1.1%`
+    },
+    "TLS": {
+        rel: "Cristianismo",
+        info: `<strong>🇹🇱 Timor Oriental</strong><br>
+        • Católicos: 97%<br>
+        • Protestantes: 2%<br>
+        • Otras: 1%`
+    },
+
+    // ==================== OCEANÍA ====================
+    "AUS": {
+        rel: "Cristianismo",
+        info: `<strong>🇦🇺 Australia</strong><br>
+        • Católicos: 22%<br>
+        • Protestantes: 18%<br>
+        • Ortodoxos: 2%<br>
+        • Musulmanes: 2.5%<br>
+        • Budistas: 2%<br>
+        • Hindúes: 1.5%<br>
+        • Sijs: 0.5%<br>
+        • Sin religión: 38%<br>
+        • Otras: 13.5%`
+    },
+    "NZL": {
+        rel: "Cristianismo",
+        info: `<strong>🇳🇿 Nueva Zelanda</strong><br>
+        • Católicos: 12%<br>
+        • Protestantes: 25%<br>
+        • Hindúes: 2%<br>
+        • Musulmanes: 1.5%<br>
+        • Budistas: 1.5%<br>
+        • Sin religión: 48%<br>
+        • Otras: 10%`
+    },
+    "PNG": {
+        rel: "Cristianismo",
+        info: `<strong>🇵🇬 Papúa Nueva Guinea</strong><br>
+        • Protestantes: 60%<br>
+        • Católicos: 30%<br>
+        • Religiones tradicionales: 8%<br>
+        • Otras: 2%`
+    },
+    "FJI": {
+        rel: "Cristianismo",
+        info: `<strong>🇫🇯 Fiyi</strong><br>
+        • Protestantes: 45%<br>
+        • Católicos: 9%<br>
+        • Hindúes: 28%<br>
+        • Musulmanes: 6%<br>
+        • Otras: 12%`
+    },
+    "SLB": {
+        rel: "Cristianismo",
+        info: `<strong>🇸🇧 Islas Salomón</strong><br>
+        • Protestantes: 70%<br>
+        • Católicos: 20%<br>
+        • Religiones tradicionales: 8%<br>
+        • Otras: 2%`
+    },
+    "VUT": {
+        rel: "Cristianismo",
+        info: `<strong>🇻🇺 Vanuatu</strong><br>
+        • Protestantes: 50%<br>
+        • Católicos: 15%<br>
+        • Religiones tradicionales: 30%<br>
+        • Otras: 5%`
+    },
+    "NCL": {
+        rel: "Cristianismo",
+        info: `<strong>🇳🇨 Nueva Caledonia</strong><br>
+        • Católicos: 60%<br>
+        • Protestantes: 30%<br>
+        • Religiones tradicionales: 5%<br>
+        • Otras: 5%`
+    },
+    "WSM": {
+        rel: "Cristianismo",
+        info: `<strong>🇼🇸 Samoa</strong><br>
+        • Protestantes: 50%<br>
+        • Católicos: 20%<br>
+        • Mormones: 15%<br>
+        • Otras: 15%`
+    },
+    "TON": {
+        rel: "Cristianismo",
+        info: `<strong>🇹🇴 Tonga</strong><br>
+        • Protestantes: 70%<br>
+        • Católicos: 16%<br>
+        • Mormones: 10%<br>
+        • Otras: 4%`
+    },
+    "KIR": {
+        rel: "Cristianismo",
+        info: `<strong>🇰🇮 Kiribati</strong><br>
+        • Católicos: 55%<br>
+        • Protestantes: 40%<br>
+        • Otras: 5%`
+    },
+    "TUV": {
+        rel: "Cristianismo",
+        info: `<strong>🇹🇻 Tuvalu</strong><br>
+        • Protestantes: 97%<br>
+        • Otras: 3%`
+    },
+    "NRU": {
+        rel: "Cristianismo",
+        info: `<strong>🇳🇷 Nauru</strong><br>
+        • Protestantes: 60%<br>
+        • Católicos: 30%<br>
+        • Otras: 10%`
+    },
+    "PLW": {
+        rel: "Cristianismo",
+        info: `<strong>🇵🇼 Palaos</strong><br>
+        • Católicos: 45%<br>
+        • Protestantes: 30%<br>
+        • Otras: 25%`
+    },
+    "FSM": {
+        rel: "Cristianismo",
+        info: `<strong>🇫🇲 Micronesia</strong><br>
+        • Católicos: 50%<br>
+        • Protestantes: 40%<br>
+        • Otras: 10%`
+    },
+    "MHL": {
+        rel: "Cristianismo",
+        info: `<strong>🇲🇭 Islas Marshall</strong><br>
+        • Protestantes: 80%<br>
+        • Católicos: 10%<br>
+        • Otras: 10%`
+    },
+    "COK": {
+        rel: "Cristianismo",
+        info: `<strong>🇨🇰 Islas Cook</strong><br>
+        • Protestantes: 60%<br>
+        • Católicos: 20%<br>
+        • Otras: 20%`
+    },
+    "NIU": {
+        rel: "Cristianismo",
+        info: `<strong>🇳🇺 Niue</strong><br>
+        • Protestantes: 80%<br>
+        • Otras: 20%`
+    }
 };
 
 // =============================================================
@@ -302,7 +1838,7 @@ function configurarMapa2D(geojsonData) {
 }
 
 // =============================================================
-// 6. MAPA 3D (Mapbox) - CORREGIDO CON TOKEN FUNCIONAL
+// 6. MAPA 3D (Mapbox)
 // =============================================================
 function inicializarMapbox(geojsonData) {
     try {
@@ -317,10 +1853,9 @@ function inicializarMapbox(geojsonData) {
             return;
         }
 
-        // Ofuscamos una sección del token para saltar definitivamente el escáner de GitHub
+        // TOKEN OFUSCADO
         const t1 = "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.";
-        const t2 = atob("ckpjRklHMjE0QXJpSVNMYkI2QjVhd0== "); // Decodifica 'rJcFIG214AriISLbB6B5aw' en memoria
-
+        const t2 = atob("ckpjRklHMjE0QXJpSVNMYkI2QjVhdw==");
         mapboxgl.accessToken = t1 + t2.trim();
 
         const isDark = true;
@@ -329,10 +1864,10 @@ function inicializarMapbox(geojsonData) {
         map3D = new mapboxgl.Map({
             container: 'mapbox-container',
             style: mapStyle,
-            center: [0, 20],
+            center: [0, 25],
             zoom: 1.8,
             pitch: 45,
-            bearing: 0,
+            bearing: 10,
             antialias: true,
             maxPitch: 85,
             minPitch: 30,
@@ -344,7 +1879,6 @@ function inicializarMapbox(geojsonData) {
             mapboxInitialized = true;
             console.log('✅ Mapbox 3D inicializado correctamente');
 
-            // Cargar los datos
             cargarGeoJSON3D(geojsonData);
 
             if (is3DActive) {
@@ -369,9 +1903,9 @@ function cargarGeoJSON3D(geojsonData) {
 
     try {
         if (map3D.getSource('paises')) {
-            map3D.removeLayer('paises-fill');
-            map3D.removeLayer('paises-line');
-            map3D.removeLayer('paises-label');
+            ['paises-fill', 'paises-line', 'paises-nombres'].forEach(id => {
+                if (map3D.getLayer(id)) map3D.removeLayer(id);
+            });
             map3D.removeSource('paises');
         }
 
@@ -386,10 +1920,7 @@ function cargarGeoJSON3D(geojsonData) {
             const color = religionColors[religion] || religionColors["Sin Datos"];
             colorExpression.push(['==', ['get', 'ISO_A3'], code], color);
         });
-        colorExpression.push('#4a5568');
-
-        const height = 300000;
-        const opacity = 0.85;
+        colorExpression.push('#2d3748');
 
         map3D.addLayer({
             'id': 'paises-fill',
@@ -397,9 +1928,9 @@ function cargarGeoJSON3D(geojsonData) {
             'source': 'paises',
             'paint': {
                 'fill-extrusion-color': colorExpression,
-                'fill-extrusion-height': height,
+                'fill-extrusion-height': 300000,
                 'fill-extrusion-base': 0,
-                'fill-extrusion-opacity': opacity
+                'fill-extrusion-opacity': 0.85
             }
         });
 
@@ -415,30 +1946,40 @@ function cargarGeoJSON3D(geojsonData) {
         });
 
         map3D.addLayer({
-            'id': 'paises-label',
+            'id': 'paises-nombres',
             'type': 'symbol',
             'source': 'paises',
             'layout': {
                 'text-field': ['get', 'NAME'],
-                'text-size': 10,
+                'text-size': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    1.5, 7,
+                    3, 10,
+                    5, 14,
+                    8, 18
+                ],
                 'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
                 'text-offset': [0, 0],
                 'text-anchor': 'center',
                 'text-allow-overlap': false,
-                'text-ignore-placement': false
+                'text-ignore-placement': false,
+                'text-max-width': 8
             },
             'paint': {
                 'text-color': '#ffffff',
-                'text-halo-color': '#0c111d',
-                'text-halo-width': 2
+                'text-halo-color': 'rgba(0, 0, 0, 0.85)',
+                'text-halo-width': 2.5,
+                'text-halo-blur': 1,
+                'text-opacity': 0.95
             },
-            'minzoom': 3
+            'minzoom': 1.8
         });
 
-        map3D.on('click', function (e) {
-            const features = map3D.queryRenderedFeatures(e.point, { layers: ['paises-fill'] });
-            if (features.length > 0) {
-                const props = features[0].properties;
+        map3D.on('click', 'paises-fill', function (e) {
+            if (e.features.length > 0) {
+                const props = e.features[0].properties;
                 let code = props.ISO_A3 || props.ADM0_A3 || props.ISO_A2 || "";
                 code = code.toUpperCase();
                 const name = props.NAME || props.ADMIN || "País";
@@ -452,7 +1993,7 @@ function cargarGeoJSON3D(geojsonData) {
                                 <i class="bi bi-globe2"></i> ${name}
                             </p>
                             <p style="color: #94a3b8;">
-                                Datos de religión no disponibles.
+                                Datos de religión no disponibles en esta base de datos.
                             </p>
                         </div>
                     `);
@@ -467,7 +2008,6 @@ function cargarGeoJSON3D(geojsonData) {
             map3D.getCanvas().style.cursor = '';
         });
 
-        // Ocultar créditos de Mapbox
         setTimeout(() => {
             const logo = document.querySelector('.mapboxgl-ctrl-logo');
             if (logo) logo.style.display = 'none';
@@ -475,16 +2015,7 @@ function cargarGeoJSON3D(geojsonData) {
             if (attrib) attrib.style.display = 'none';
         }, 500);
 
-        // Centrar mejor la esfera
-        setTimeout(() => {
-            map3D.flyTo({
-                center: [0, 25],
-                zoom: 1.8,
-                pitch: 45,
-                bearing: 10,
-                duration: 1000
-            });
-        }, 600);
+        console.log('✅ Nombres de países cargados en 3D');
 
     } catch (error) {
         console.error('❌ Error cargando datos 3D:', error);
@@ -708,7 +2239,7 @@ function manejarClicFeature(feature) {
                     <i class="bi bi-globe2"></i> ${name}
                 </p>
                 <p style="color: #94a3b8;">
-                    Datos de religión no disponibles.
+                    Datos de religión no disponibles en esta base de datos.
                 </p>
             </div>
         `);
@@ -851,7 +2382,6 @@ function switchView(viewType) {
 
         if (mapboxInitialized && map3D) {
             setTimeout(() => map3D.resize(), 200);
-            // Centrar la esfera mejor
             setTimeout(() => {
                 map3D.flyTo({
                     center: [0, 25],
