@@ -1874,6 +1874,8 @@ function configurarMapa2D(geojsonData) {
             view: vista2D
         });
 
+        
+
         map2D.on('click', function(evt) {
             const feature = map2D.forEachFeatureAtPixel(evt.pixel, function(feat) {
                 return feat;
@@ -2471,8 +2473,8 @@ function buildComparativeTable() {
     ];
 
     const rows = [
-        ['Origen', 'Jerusalén, 30 d.C. (Pentecostés)', 'Jerusalén, 30 d.C. (Pentecostés)', 'Jerusalén, 30 d.C. (Pentecostés)', 'EE.UU., 1830', 'EE.UU., 1870', 'Arabia, 622 d.C.', 'India, ~2000 a.C.', 'India, s.VI a.C.', 'China, ~500 a.C.'],
-        ['Fundador', 'Jesucristo', 'Jesucristo', 'Jesucristo', 'José Smith', 'Charles T. Russell', 'Mahoma', 'Sin fundador', 'Buda (Siddhartha)', 'Confucio, Lao-Tsé'],
+        ['Origen', 'Jerusalén, 30 d.C. ', 'Sin especificar', 'Sin especificar', 'EE.UU., 1830', 'EE.UU., 1870', 'Arabia, 622 d.C.', 'India, ~2000 a.C.', 'India, s.VI a.C.', 'China, ~500 a.C.'],
+        ['Fundador', 'Jesucristo', 'Para ellos Jesucristo', 'Segun investigaciones Jesucristo', 'José Smith', 'Charles T. Russell', 'Mahoma', 'Sin fundador', 'Buda (Siddhartha)', 'Confucio, Lao-Tsé'],
         ['Inicio como Movimiento', 'Pentecostés (30 d.C.)', 'Pentecostés (30 d.C.)', 'Pentecostés (30 d.C.)', '1830 (Nueva York)', '1870 (Pensilvania)', '622 d.C. (Hégira)', '~2000 a.C.', '528 a.C. (Iluminación de Buda)', '~500 a.C.'],
         ['Evento Clave', 'La Reforma (1517)', 'Edicto de Milán (313)', 'Gran Cisma (1054)', 'Visión de José Smith (1820)', 'Estudio bíblico de Russell (1870)', 'Revelación del Corán (610 d.C.)', 'Composición de los Vedas', 'Iluminación de Buda', 'Enseñanzas de Confucio'],
         ['Autoridad', 'Sola Scriptura (Biblia)', 'Papa + Biblia + Tradición', 'Patriarca + Biblia + Tradición', 'Profeta viviente + Libro de Mormón', 'Cuerpo Gobernante + Biblia', 'Corán + Hadiz + Ulemas', 'Vedas + Gurús', 'Sutras + Sangha', 'Textos + Maestros'],
@@ -2532,8 +2534,9 @@ function buildComparativeTable() {
         th.style.border = '1px solid #ccc';
         th.style.padding = '6px 8px';
         th.style.background = i === 0 ? '#f7f7f7' : '#fafafa';
-        th.style.position = i === 0 ? 'sticky' : '';
+        th.style.position = 'sticky';
         th.style.top = '0';
+        th.style.zIndex = '10';
         headRow.appendChild(th);
     });
     thead.appendChild(headRow);
