@@ -2509,6 +2509,36 @@ function buildComparativeTable() {
     container.style.zIndex = '99999';
     container.style.backdropFilter = 'blur(6px)';
     container.style.boxShadow = '0 6px 24px rgba(2,6,23,0.6)';
+    container.style.animation = 'slideInUp 0.4s ease-out';
+    
+    // Agregar estilos de animación si no existen
+    if (!document.getElementById('comparative-table-styles')) {
+        const style = document.createElement('style');
+        style.id = 'comparative-table-styles';
+        style.textContent = `
+            @keyframes slideInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes slideOutDown {
+                from {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
     // adapt background and text color to currentTheme
     if (currentTheme === 'dark') {
         container.style.background = 'rgba(10,14,22,0.88)';
